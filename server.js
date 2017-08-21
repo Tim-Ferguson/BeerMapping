@@ -15,7 +15,7 @@ MongoClient.connect(process.env.mlaburl , function(err, database){
 	})
 	app.get('*',function(req,res,next){ 
 		if(req.headers['x-forwarded-proto']!='https') 
-			res.redirect('https://brew-maps.herokuapp.com'+req.url) ;
+			res.redirect(process.env.https_url+req.url) ;
 		else 
 			next();
 	})

@@ -15,13 +15,23 @@
 		height: 100%;
 		width: 100%;
 	}
-	#location, #love {
+	#location {
 		z-index: 5;
 		margin-left: auto;
 		margin-right: auto;
 		left: 0;
 		right: 0;
 		width: 30%;
+	}
+	#love {
+		position:absolute;
+		z-index: 5;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		width: 75%;
+		text-align: center;
 	}
 	@media screen and (-webkit-min-device-pixel-ratio:0) { 
 		select,
@@ -51,8 +61,8 @@
 		</div>
 		<div id="mapContainter">
 			<div id="map"></div>
+			<p id="love" class="love">Made with <i class="icon ion-heart"></i> by Tim Ferguson</p>
 		</div>
-		<p id="love" style="position:absolute;" class="love">Made with <i class="icon ion-heart"></i> by Tim Ferguson</p>
 	</div>
 	<script>
 	var globalData;
